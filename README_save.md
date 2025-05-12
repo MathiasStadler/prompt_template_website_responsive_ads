@@ -15,7 +15,10 @@
   - Add for each link a subpage with same footer and Header and add 100 letter form Lorem Ipsum
   - Arrange inside the head area next to each other in a row
   - Arrange inside the foot area next to each other in a row too
+  - Make both columns browser window wide please note the ratio
 - create a folder structure and save the result inside new  HTML files
+- Add in second columns sample  Google Ads
+- edit the files directly
 
 ## 2,run
 

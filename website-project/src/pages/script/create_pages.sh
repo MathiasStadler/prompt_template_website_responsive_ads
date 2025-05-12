@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# Create base directory structure
+mkdir -p src/{css,pages}
+
+# Create template.html
+cat > src/pages/template.html << 'EOL'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,25 +36,6 @@
             <div class="sidebar">
                 <h2>Related Information</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                
-                <!-- Google Ads Integration -->
-                <div class="ad-container">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_CLIENT_ID"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-YOUR_CLIENT_ID"
-                         data-ad-slot="YOUR_AD_SLOT_ID"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-
-                <!-- Sample Ad Placeholder for Development -->
-                <div class="ad-placeholder">
-                    <div class="ad-placeholder-text">Advertisement</div>
-                </div>
             </div>
         </div>
     </main>
@@ -65,3 +53,13 @@
     </footer>
 </body>
 </html>
+EOL
+
+# Create pages from template
+for page in facilities contact press international patient gtc impressum createDisplay faq cookies; do
+    title="$(tr '[:lower:]' '[:upper:]' <<< ${page:0:1})${page:1}"
+    sed "s/PAGE_TITLE/$title/g" src/pages/template.html > src/pages/${page}.html
+    echo "Created: src/pages/${page}.html"
+done
+
+echo "All pages created successfully!"
