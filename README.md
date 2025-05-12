@@ -9,6 +9,7 @@
 - Footer with legal and utility links
 - Clean, maintainable code structure
 - Add for each link a subpage with same footer and Header and add 100 letter form Lorem Ipsum
+- Arrange next to each other in a row
 
 ## Implementation
 
