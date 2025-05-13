@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 # Create index.html from template
 sed 's/PAGE_TITLE/Home/g; s/\.\.\/css/css/g' pages/template.html > index.html
 
-# Create subpages
+# Create sub-pages
 pages="facilities contact press international patient gtc impressum display faq cookies"
 
 for page in $pages; do
