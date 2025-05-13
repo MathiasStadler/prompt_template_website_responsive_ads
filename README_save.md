@@ -22,4 +22,15 @@
 
 ## 2,run
 
-- Add for each link a additional page
+- Create a HTML/CSS based code for a webpage with follow feature
+  - Latest stable version of today of  HTML5 and CSS3 implementation
+  - Responsive header with navigation menu
+  - Head area
+  - Foot area
+  - Main area with
+    - A table should be divided into two columns, with the left column taking up 63% of the screen and the right column taking up 37% of the screen. The table should have a margin of 5% of the screen width
+  - Footer with legal and utility links
+  - Clean, maintainable code structure
+  - Add for each link a subpage with same footer and Header and add 100 letters form Lorem Ipsum
+  - Arrange the links next to each other in a row
+  - Add for each link a additional page with the same

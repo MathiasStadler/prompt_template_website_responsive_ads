@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #333;
+    --margin-width: 5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: var(--primary-color);
+    padding: 1.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 var(--margin-width);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+}
+
+main {
+    flex: 1;
+    margin: 2rem var(--margin-width);
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-content {
+    flex: 0 0 63%;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+    flex: 0 0 37%;
+    background: #f5f5f5;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: var(--secondary-color);
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+footer nav a {
+    color: white;
+    opacity: 0.8;
+}
+
+footer nav a:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .main-content,
+    .sidebar {
+        flex: 1;
+        width: 100%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
